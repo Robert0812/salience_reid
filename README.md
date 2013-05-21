@@ -49,11 +49,17 @@ Please note that the dense features codes have been heavily re-written for modif
 BibTex
 ======
 @inproceedings{zhao2013unsupervised,
+ 
  title = {Unsupervised Salience Learning for Person Re-identification},
+ 
  author={Zhao, Rui and Ouyang, Wanli and Wang, Xiaogang},
+ 
  booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+ 
  year = {2013},
+ 
  month = {June},
+ 
  address = {Portland, USA}
 }
 
