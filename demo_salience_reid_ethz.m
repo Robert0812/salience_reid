@@ -7,18 +7,6 @@
 % for Person Re-identification. In IEEE Conference of Computer Vision and
 % Pattern Recognition (CVPR), 2013. 
 %
-% Remark1: this implementation is a little different than the original
-% version in the training / testing partition, so that the result may vary
-% a little, if you use the default settings and parameters, you are
-% supposed to obtain the results for the first trial:
-% 25.32% (SDC_knn) and 27.22% (SDC_ocsvm). 
-%
-% Remark2:
-%   this demo was tested on MATLAB (R2010b), 64-bit Win7, Intel Xeon 3.30 GHz CPU
-%   testing on ETHZ (seq1) dataset would consume around 5.0 GB memory
-%   testing on ETHZ (seq2) dataset would consume around 1.6 GB memory
-%   testing on ETHZ (seq3) dataset would consume around 1.4 GB memory
-%
 
 clear all;
 global dataset baseExp gridstep patchsize par
