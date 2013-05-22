@@ -26,8 +26,8 @@ Two demos are available for reproducing the results.
 
 Remarks
 ========
-- this implementation is a little different than the original version in the training / testing partition, so that the result may vary a little, if you use the default settings and parameters, you are supposed to obtain the rank-1 matching rate for the trial 1 on VIPeR dataset: 25.32% (SDC_knn) and 27.22% (SDC_ocsvm). 
-
+- This implementation is a little different than the original version in the training / testing partition, so that the result may vary a little, if you use the default settings and parameters, you are supposed to obtain the rank-1 matching rate for the trial 1 on VIPeR dataset: 25.32% (SDC_knn) and 27.22% (SDC_ocsvm). 
+- The training / testing partition is generated following the approach [SDALF](http://www.lorisbazzani.info/code-datasets/sdalf-descriptor/) 
 - Parallel Toolbox can accellerate the computation, use matlabpool if necessary
 - This demo was tested on MATLAB (R2010b), 64-bit Win7, Intel Xeon 3.30 GHz CPU
 - Memory cost:
