@@ -26,7 +26,7 @@ par = struct(...
     );
 
 % par.alpha used when testing with OCSVM
-% ethz1: [-1.26, 0.2, 0.75, 1, 0.6]
+% ethz1: [-0.9, 0.7, 1.5, 5, 0.5]
 % ethz2: [-0.33, 0.2, 0.4, 3, 0.6]
 % ethz3: [-1.26, 0.2, 0.75, 1, 0.6]
 
