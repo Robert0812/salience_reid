@@ -1,5 +1,5 @@
-salience_reid
-=============
+Unsupervised Salience Learning for Re-id
+===========================================================
 
 MATLAB package for CVPR 13 paper "R. Zhao, W. Ouyang, and X. Wang. Unsupervised Salience Learning for Person Re-identification. In CVPR 2013."
 
