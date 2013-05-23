@@ -1,7 +1,7 @@
 % Main function entry for evaluating on ETHZ dataset
 %
 % Created by Rui Zhao, rzhao@ee.cuhk.edu.hk
-% This code is release under research-only license, please cite the paper
+% This code is release under BSD license, please cite our paper if you use this code:
 %
 % Rui Zhao, Wanli Ouyang, and Xiaogang Wang. Unsupervised Salience Learning
 % for Person Re-identification. In IEEE Conference of Computer Vision and
