@@ -1,7 +1,7 @@
 % Main function entry for evaluating on VIPeR dataset
 %
 % Created by Rui Zhao, rzhao@ee.cuhk.edu.hk
-% This code is release under research-only license, please cite the paper
+% This code is release under BSD license, please cite our paper if you use this code:
 %
 % Rui Zhao, Wanli Ouyang, and Xiaogang Wang. Unsupervised Salience Learning
 % for Person Re-identification. In IEEE Conference of Computer Vision and
@@ -191,8 +191,8 @@ end
 %% compute salience (knn or ocsvm)
 switch par.use_salience
     case 0
-        sg_cell = {};
-        sp_cell = {};
+        sg_cell = cell(gsize, gsize);
+        sp_cell = cell(gsize, gsize);
         
     case 1 % KNN salience
         
