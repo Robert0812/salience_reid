@@ -3,7 +3,7 @@ Unsupervised Salience Learning for Re-id
 
 MATLAB package for CVPR 13 paper "R. Zhao, W. Ouyang, and X. Wang. [Unsupervised Salience Learning for Person Re-identification](http://www.ee.cuhk.edu.hk/~rzhao/papers/zhaoOWcvpr13.pdf). In CVPR 2013."
 
-Created by Rui Zhao, on May 20, 2013.
+Created by [Rui Zhao](www.ee.cuhk.edu.hk/~rzhao), on May 20, 2013.
 
 ##Summary
 In this package, you find an updated version of MATLAB code for the following paper:
@@ -43,12 +43,12 @@ Please note that the dense features codes have been heavily re-written for modif
 
 ##BibTex
 
-@inproceedings{zhao2013unsupervised,
- title = {Unsupervised Salience Learning for Person Re-identification},
- author={Zhao, Rui and Ouyang, Wanli and Wang, Xiaogang},
- booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
- year = {2013}
-}
+	@inproceedings{zhao2013unsupervised,
+ 		title = {Unsupervised Salience Learning for Person Re-identification},
+ 		author={Zhao, Rui and Ouyang, Wanli and Wang, Xiaogang},
+ 		booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+ 		year = {2013}
+	}
 
 ##Acknoledgement
 This work is supported by the General Research Fund sponsored by the Research Grants Council of Hong Kong (Project No. CUHK 417110 and CUHK 417011) and National Natural Science Foundation of China (Project No. 61005057). The code was written by Rui Zhao, for any problem please contact the first author. 
@@ -56,26 +56,26 @@ This work is supported by the General Research Fund sponsored by the Research Gr
 
 ##License
 
-Copyright (c) 2013, Rui Zhao
-All rights reserved. 
+	Copyright (c) 2013, Rui Zhao
+	All rights reserved. 
 
-Redistribution and use in source and binary forms, with or without 
-modification, are permitted provided that the following conditions are 
-met:
-    * Redistributions of source code must retain the above copyright 
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright 
-      notice, this list of conditions and the following disclaimer in 
-      the documentation and/or other materials provided with the distribution
+	Redistribution and use in source and binary forms, with or without 
+	modification, are permitted provided that the following conditions are 
+	met:
+    		* Redistributions of source code must retain the above copyright 
+      		  notice, this list of conditions and the following disclaimer.
+    		* Redistributions in binary form must reproduce the above copyright 
+      		  notice, this list of conditions and the following disclaimer in 
+      		  the documentation and/or other materials provided with the distribution
    
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
-POSSIBILITY OF SUCH DAMAGE.
+	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+	AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+	ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 	
+	LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+	CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+	SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+	INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+	CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+	ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+	POSSIBILITY OF SUCH DAMAGE.
