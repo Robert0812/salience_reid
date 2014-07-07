@@ -5,27 +5,23 @@ MATLAB package for CVPR 13 paper "R. Zhao, W. Ouyang, and X. Wang. [Unsupervised
 
 Created by Rui Zhao, on May 20, 2013.
 
-Summary
-========
+###Summary
 In this package, you find an updated version of MATLAB code for the following paper:
 Rui Zhao, Wanli Ouyang, and Xiaogang Wang. Unsupervised Salience Learning for Person Re-identification. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2013. 
 
 
-Install
-========
+###Install
 - Download VIPeR dataset, and put the subfolders (\cam_a and \cam_b) into directory .\dataset\viper\
 - Download ETHZ dataset, and put the subfolders (\seq1, \seq2, and \seq3) into directory .\dataset\ethz\
 
 
-Demos
-======
+###Demos
 Two demos are available for reproducing the results.
 - demo_salience_reid_viper.m : perform evaluation over VIPeR dataset
 - demo_salience_reid_ethz.m  : perform evaluation over ETHZ dataset (including Seq.1, Seq.2, and Seq.3).
 
 
-Remarks
-========
+###Remarks
 - This implementation is a little different than the original version in the training / testing partition, so that the result may vary a little, if you use the default settings and parameters, you are supposed to obtain the rank-1 matching rate for the trial 1 on VIPeR dataset: 25.32% (SDC_knn) and 27.22% (SDC_ocsvm). 
 - The training / testing partition is generated following the approach [SDALF](http://www.lorisbazzani.info/code-datasets/sdalf-descriptor/) 
 - Parallel Toolbox can accellerate the computation, use matlabpool if necessary
@@ -37,8 +33,7 @@ Remarks
 	- Running demo on ETHZ (seq3) dataset would consume around 1.4 GB memory
 
 
-Additional Libs
-===============
+###Additional Libs
 We provide with our package some additional libraries we used in our implementation.
 - svmtrain.mexw64 in LibSVM, http://www.csie.ntu.edu.tw/~cjlin/libsvm/
 - slmetric_pw.m in sltoolbox, http://www.mathworks.com/matlabcentral/fileexchange/12333-statistical-learning-toolbox
@@ -46,32 +41,21 @@ We provide with our package some additional libraries we used in our implementat
 Please note that the dense features codes have been heavily re-written for modification flexibility. 
 
 
-BibTex
-======
+###BibTex
+
 @inproceedings{zhao2013unsupervised,
- 
  title = {Unsupervised Salience Learning for Person Re-identification},
- 
  author={Zhao, Rui and Ouyang, Wanli and Wang, Xiaogang},
- 
  booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
- 
- year = {2013},
- 
- month = {June},
- 
- address = {Portland, USA}
- 
+ year = {2013}
 }
 
-
-Acknoledgement
-==============
+###Acknoledgement
 This work is supported by the General Research Fund sponsored by the Research Grants Council of Hong Kong (Project No. CUHK 417110 and CUHK 417011) and National Natural Science Foundation of China (Project No. 61005057). The code was written by Rui Zhao, for any problem please contact the first author. 
 
 
-License
-=======
+###License
+
 Copyright (c) 2013, Rui Zhao
 All rights reserved. 
 
