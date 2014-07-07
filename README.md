@@ -41,7 +41,8 @@ We provide with our package some additional libraries we used in our implementat
 Please note that the dense features codes have been heavily re-written for modification flexibility. 
 
 
-##BibTex
+##Citing our work
+Please kindly cite our work in your publications if it helps your research:
 
 	@inproceedings{zhao2013unsupervised,
  		title = {Unsupervised Salience Learning for Person Re-identification},
