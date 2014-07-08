@@ -5,7 +5,7 @@ MATLAB package for CVPR 13 paper "R. Zhao, W. Ouyang, and X. Wang. [Unsupervised
 
 Created by [Rui Zhao](www.ee.cuhk.edu.hk/~rzhao), on May 20, 2013.
 
-##Summary
+#Summary
 In this package, you find an updated version of MATLAB code for the following paper:
 Rui Zhao, Wanli Ouyang, and Xiaogang Wang. Unsupervised Salience Learning for Person Re-identification. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2013. 
 
