@@ -118,7 +118,7 @@ end
 % image and feature information
 [h, w, ~] = size(imread([dnorm_dir, files(1).name]));
 % feature information
-feat1 = strcat(cache_dir, 'dfeat\feat1.mat');
+feat1 = strcat(cache_dir, 'dfeat/feat1.mat');
 if exist(feat1, 'file')
     load(feat1);
     [dim, ~] = size(densefeat);

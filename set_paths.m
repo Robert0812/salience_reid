@@ -12,34 +12,34 @@
 
 
 % addpath
-addpath(genpath(strcat(project_dir, 'code\')));
+addpath(genpath(strcat(project_dir, 'code/')));
 
 % load test dataset
-dataset_dir = strcat(project_dir, 'dataset\', dataset, '\');
+dataset_dir = strcat(project_dir, 'dataset/', dataset, '/');
 
 % mat file directory
-mat_dir = strcat(project_dir, 'mat\');
+mat_dir = strcat(project_dir, 'mat/');
 
 % cache directory
-cache_dir = strcat(project_dir, 'cache\', dataset, '\');
+cache_dir = strcat(project_dir, 'cache/', dataset, '/');
 
 % normalized data
-dnorm_dir = strcat(cache_dir, 'datanorm\');
+dnorm_dir = strcat(cache_dir, 'datanorm/');
 
 % dense feature directory
-feat_dir = strcat(cache_dir, 'dfeat\');
+feat_dir = strcat(cache_dir, 'dfeat/');
 
 % mutual distance map set
-pwdist_dir = strcat(cache_dir, 'pwdist\');
+pwdist_dir = strcat(cache_dir, 'pwdist/');
 
 % salience directory
-salience_dir = strcat(cache_dir, 'salience\');
+salience_dir = strcat(cache_dir, 'salience/');
 
 % result directory
-result_dir = strcat(cache_dir, 'result\');
+result_dir = strcat(cache_dir, 'result/');
 
 % reid directory
-reid_dir = strcat(result_dir, 'reid\');
+reid_dir = strcat(result_dir, 'reid/');
 
 if ~exist(cache_dir, 'dir')
     

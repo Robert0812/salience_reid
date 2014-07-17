@@ -9,8 +9,9 @@
 %
 
 
-clear all; clc;
-test_trial = 1;
+% clear all; clc;
+% test_trial = 3;
+function CMC = demo_salience_reid_viper(test_trial)
 
 global dataset baseExp TRIAL gridstep patchsize par
 
@@ -24,11 +25,11 @@ par = struct(...
     'Nr',                           100, ... 
     'sigma1',                       2.8, ...
     'msk_thr',                      0.2, ...
-    'norm_data',                    1, ...
-    'new_feat',                     1, ...
+    'norm_data',                    0, ...
+    'new_feat',                     0, ...
     'use_mask',                     1, ...
-    'use_salience',                 2, ... % set 1 to use knn salience, and set 2 to use ocsvm salience
-    'alpha',                        [-1, 0.4, 1, 0.6, 0],  ... %[-1, 0.4, 1, 0.6, 0], ... %
+    'use_salience',                 1, ... % set 1 to use knn salience, and set 2 to use ocsvm salience
+    'alpha',                        [-1, 0, 0, 0, 0],  ... %[-1, 0.4, 1, 0.6, 0], ... %
     'L2',                           1, ...
     'swap',                         1 ...
     );
@@ -57,7 +58,7 @@ switch par.method
         
 end
 
-project_dir = strcat(pwd, '\');
+project_dir = strcat(pwd, '/');
 set_paths;
 if par.norm_data
     norm_data;
@@ -87,51 +88,54 @@ end
 clear ref_pwmap_prb ref_pwmap_gal;
 Nr = par.Nr;
 
-if ~exist([pwdist_dir, 'pwmap_ref_trial', num2str(TRIAL), '.mat'], 'file')
-    
-    % load testing data
-    feat_gal = zeros(dim, ny*nx, gsize);
-    feat_prb = zeros(dim, ny*nx, gsize);
-    hwait = waitbar(0, 'Loading data for testing ...');
-    for i = 1:gsize
-        load([feat_dir, 'feat', num2str(Sg(i)), '.mat']);
-        feat_gal(:, :, i) = densefeat;
-        load([feat_dir, 'feat', num2str(Sp(i)), '.mat']);
-        feat_prb(:, :, i) = densefeat;
-        waitbar(i/gsize, hwait);
-    end
-    
-    % load reference data
-    ref_feat_gal = zeros(dim, ny*nx, Nr);
-    ref_feat_prb = zeros(dim, ny*nx, Nr);
-    hwait = waitbar(0, 'Loading reference data ...');
-    for i = 1:Nr
-        load([feat_dir, 'feat', num2str(trnSg(i)), '.mat']);
-        ref_feat_gal(:, :, i) = densefeat;
-        load([feat_dir, 'feat', num2str(trnSp(i)), '.mat']);
-        ref_feat_prb(:, :, i) = densefeat;
-        waitbar(i/Nr, hwait);
-    end
+if par.use_salience
 
-    % patch match with reference data for computing salience
-    for i = 1:gsize
-        for j = 1:Nr
-            [ref_pwmap_prb(i, j).forward, ref_pwmap_prb(i, j).fpos, ~] = ...
-                mutualmap(feat_prb(:, :, i), ref_feat_gal(:, :, j));
-            [ref_pwmap_gal(i, j).forward, ref_pwmap_gal(i, j).fpos, ~] = ...
-                mutualmap(feat_gal(:, :, i), ref_feat_prb(:, :, j));
-            waitbar(j/Nr, hwait, ['Computing mutual map with reference sample ', ...
-                num2str(i), ' out of ', num2str(gsize), '...']);
+    if ~exist([pwdist_dir, 'pwmap_ref_trial', num2str(TRIAL), '.mat'], 'file')
+        
+        % load testing data
+        feat_gal = zeros(dim, ny*nx, gsize);
+        feat_prb = zeros(dim, ny*nx, gsize);
+        hwait = waitbar(0, 'Loading data for testing ...');
+        for i = 1:gsize
+            load([feat_dir, 'feat', num2str(Sg(i)), '.mat']);
+            feat_gal(:, :, i) = densefeat;
+            load([feat_dir, 'feat', num2str(Sp(i)), '.mat']);
+            feat_prb(:, :, i) = densefeat;
+            waitbar(i/gsize, hwait);
         end
+        
+        % load reference data
+        ref_feat_gal = zeros(dim, ny*nx, Nr);
+        ref_feat_prb = zeros(dim, ny*nx, Nr);
+        hwait = waitbar(0, 'Loading reference data ...');
+        for i = 1:Nr
+            load([feat_dir, 'feat', num2str(trnSg(i)), '.mat']);
+            ref_feat_gal(:, :, i) = densefeat;
+            load([feat_dir, 'feat', num2str(trnSp(i)), '.mat']);
+            ref_feat_prb(:, :, i) = densefeat;
+            waitbar(i/Nr, hwait);
+        end
+        
+        % patch match with reference data for computing salience
+        for i = 1:gsize
+            for j = 1:Nr
+                [ref_pwmap_prb(i, j).forward, ref_pwmap_prb(i, j).fpos, ~] = ...
+                    mutualmap(feat_prb(:, :, i), ref_feat_gal(:, :, j));
+                [ref_pwmap_gal(i, j).forward, ref_pwmap_gal(i, j).fpos, ~] = ...
+                    mutualmap(feat_gal(:, :, i), ref_feat_prb(:, :, j));
+                waitbar(j/Nr, hwait, ['Computing mutual map with reference sample ', ...
+                    num2str(i), ' out of ', num2str(gsize), '...']);
+            end
+        end
+        
+        save([pwdist_dir, 'pwmap_ref_trial', num2str(TRIAL), '.mat'], 'ref_pwmap_prb', 'ref_pwmap_gal');
+        close(hwait);
+        
+    else
+        load([pwdist_dir, 'pwmap_ref_trial', num2str(TRIAL), '.mat']);
     end
-    
-    save([pwdist_dir, 'pwmap_ref_trial', num2str(TRIAL), '.mat'], 'ref_pwmap_prb', 'ref_pwmap_gal');
-    close(hwait);
-    
-else
-    load([pwdist_dir, 'pwmap_ref_trial', num2str(TRIAL), '.mat']);
-end
 
+end
 
 %% Compute patch match for testing
 clear pwmap_prb pwmap_gal;

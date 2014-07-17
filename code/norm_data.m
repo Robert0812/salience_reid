@@ -14,13 +14,13 @@ switch lower(dataset)
 
     case 'viper'
         
-        files_a = dir([dataset_dir, '\cam_a\*.bmp']);
-        files_b = dir([dataset_dir, '\cam_b\*.bmp']);
+        files_a = dir([dataset_dir, '/cam_a/*.bmp']);
+        files_b = dir([dataset_dir, '/cam_b/*.bmp']);
         
         np = length(files_a);
         hwait = waitbar(0, ['Normalizing VIPeR dataset ...']);
         for p = 1:np
-            im_a = imread([dataset_dir, '\cam_a\', files_a(p).name]);
+            im_a = imread([dataset_dir, '/cam_a/', files_a(p).name]);
             img_hsv     =   rgb2hsv(im_a);
             tmp         =   img_hsv(:,:,3);
             tmp         =   histeq(tmp); % Color Equalization
@@ -29,7 +29,7 @@ switch lower(dataset)
             name_a = sprintf('%04d%03d.png', p, 1);
             imwrite(im_a, [dnorm_dir, name_a]);
             
-            im_b = imread([dataset_dir, '\cam_b\', files_b(p).name]);
+            im_b = imread([dataset_dir, '/cam_b/', files_b(p).name]);
             img_hsv     =   rgb2hsv(im_b);
             tmp         =   img_hsv(:,:,3);
             tmp         =   histeq(tmp); % Color Equalization
