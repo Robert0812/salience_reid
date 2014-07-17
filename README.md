@@ -9,7 +9,7 @@ In this package, you find an updated version of MATLAB code for the following pa
 Rui Zhao, Wanli Ouyang, and Xiaogang Wang. Unsupervised Salience Learning for Person Re-identification. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2013. 
 
 
-##Install on Windows
+##Install
 - Download VIPeR dataset, and put the subfolders (\cam_a and \cam_b) into directory .\dataset\viper\
 - Download ETHZ dataset, and put the subfolders (\seq1, \seq2, and \seq3) into directory .\dataset\ethz\
 - Compile patchmatch component: go to directory ./code/patchmatch and run mex *.cpp
