@@ -12,7 +12,8 @@ Rui Zhao, Wanli Ouyang, and Xiaogang Wang. Unsupervised Salience Learning for Pe
 ##Install on Windows
 - Download VIPeR dataset, and put the subfolders (\cam_a and \cam_b) into directory .\dataset\viper\
 - Download ETHZ dataset, and put the subfolders (\seq1, \seq2, and \seq3) into directory .\dataset\ethz\
-- Recompile the *.cpp files in folder ./code/libsvm and ./code/patchmatch . 
+- Compile patchmatch component: go to directory ./code/patchmatch and run mex *.cpp
+- Compile LibSVM: go to directory ./code/libsvm, and run make.m  
 - If you are running on Linux or OS X system, slash characters in following files should be changed from '\' to '/' accordingly: ./code/norm_data.m, ./code/initialcontext_general.m, ./set_paths.m, ./demo_salience_reid_viper.m, ./demo_salience_reid_ethz.m
 
 ##Demos
